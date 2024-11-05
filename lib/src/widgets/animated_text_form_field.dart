@@ -6,7 +6,7 @@ import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter_login/src/widgets/term_of_service_checkbox.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:phone_numbers_parser/phone_numbers_parser.dart' as pnp;
+//import 'package:phone_numbers_parser/phone_numbers_parser.dart' as pnp;
 import 'package:url_launcher/url_launcher.dart';
 
 enum TextFieldInertiaDirection {
@@ -173,20 +173,20 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
       //   dialCode: '+1',
       // );
       if (widget.controller?.value.text != null) {
-        try {
-          final parsed = pnp.PhoneNumber.parse(widget.controller!.value.text);
-          if (parsed.isValid()) {
-            // _phoneNumberInitialValue = PhoneNumber(
-            //   phoneNumber: parsed.nsn,
-            //   isoCode: parsed.isoCode.name,
-            //   dialCode: parsed.countryCode,
-            // );
-          }
-        } on pnp.PhoneNumberException {
-          // ignore
-        } finally {
-          widget.controller!.text = '';
-        }
+        // try {
+        //   //final parsed = pnp.PhoneNumber.parse(widget.controller!.value.text);
+        //   //if (parsed.isValid()) {
+        //     // _phoneNumberInitialValue = PhoneNumber(
+        //     //   phoneNumber: parsed.nsn,
+        //     //   isoCode: parsed.isoCode.name,
+        //     //   dialCode: parsed.countryCode,
+        //     // );
+        //   //}
+        // } on pnp.PhoneNumberException {
+        //   // ignore
+        // } finally {
+        widget.controller!.text = '';
+        //}
       }
     }
   }
